@@ -1,10 +1,7 @@
-import path from 'path';
-import express from 'express';
-import multer from 'multer';
-import fs from 'fs';
-
-import config from '../config/index.cjs'
-import { ethers } from 'ethers';
+const path = require('path');
+const express = require('express');
+const multer = require('multer');
+const fs = require('fs');
 
 const router = express.Router();
 
@@ -64,4 +61,4 @@ router.get('/:id', (req, res) => {
   stream.pipe(res);
 })
 
-export default router;
+module.exports = router;

@@ -1,11 +1,11 @@
-import path from 'path';
-import express from 'express';
-import dotenv from 'dotenv';
-import colors from 'colors';
-import uploadRoutes from './routes/uploadRoutes.js';
+const path = require('path');
+const express = require('express');
+const dotenv = require('dotenv');
+const colors = require('colors');
+const uploadRoutes = require('./routes/uploadRoutes.js');
 
-import { ethers } from 'ethers';
-import config from './config/index.cjs'
+const { ethers } = require('ethers');
+const config = require('./config/index.cjs');
 
 dotenv.config();
 
@@ -24,8 +24,8 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use('/api/upload', uploadRoutes);
 
-const __dirname = path.resolve()
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+const __dirnamePath = path.resolve()
+app.use('/uploads', express.static(path.join(__dirnamePath, '/uploads')));
 
 app.get('/', (req, res) => {
   res.send('API is running....');
