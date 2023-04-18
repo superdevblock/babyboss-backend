@@ -22,12 +22,8 @@
     "multer": "^1.4.2",
     "socket.io": "^4.5.4",
 
-    "@moralisweb3/common-evm-utils": "^2.11.0",
-    "axios": "^1.2.2",
     "ethereumjs-tx": "^2.1.2",
-    "ethers": "^5.7.2",
-    "moralis": "^2.11.0",
-    "web3": "^1.7.1"
+    "ethers": "^5.7.2"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
